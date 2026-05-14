@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 290" width="800" height="290">
+<defs>
+  <marker id="arw" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <polygon points="0 0, 8 3, 0 6" fill="#00AA25"/>
+  </marker>
+  <style>
+    .bg{fill:#000000}
+    .box{fill:#001500;stroke:#00FF41;stroke-width:1.5}
+    .orch{fill:#002800;stroke:#00FF41;stroke-width:2}
+    .lbl{font-family:"Courier New",Courier,monospace;font-size:11px;fill:#00FF41}
+    .sub{font-family:"Courier New",Courier,monospace;font-size:9px;fill:#007700}
+    .ttl{font-family:"Courier New",Courier,monospace;font-size:14px;fill:#00FF41;font-weight:bold}
+    .arr{stroke:#00AA25;stroke-width:1.5;fill:none;marker-end:url(#arw)}
+    .dim{stroke:#003300;stroke-width:1}
+  </style>
+</defs>
+<rect class="bg" width="800" height="290"/>
+
+<!-- Title bar -->
+<rect x="0" y="0" width="800" height="36" fill="#001200"/>
+<text x="400" y="23" class="ttl" text-anchor="middle">[ AI AGENT AUTOMATION FLOW — BUSINESS PROCESS ]</text>
+
+<!-- TRIGGER box -->
+<rect x="12" y="55" width="120" height="100" rx="4" class="box"/>
+<text x="72" y="74" class="lbl" text-anchor="middle">[ TRIGGER ]</text>
+<line x1="22" y1="80" x2="122" y2="80" class="dim"/>
+<text x="72" y="94" class="sub" text-anchor="middle">Business Data</text>
+<text x="72" y="108" class="sub" text-anchor="middle">Documents / APIs</text>
+<text x="72" y="122" class="sub" text-anchor="middle">Scheduled Events</text>
+<text x="72" y="136" class="sub" text-anchor="middle">User Requests</text>
+<text x="72" y="150" class="sub" text-anchor="middle">Webhooks</text>
+
+<!-- ORCHESTRATOR box -->
+<rect x="192" y="42" width="158" height="136" rx="4" class="orch"/>
+<text x="271" y="62" class="lbl" text-anchor="middle">ORCHESTRATOR</text>
+<text x="271" y="76" class="lbl" text-anchor="middle">AGENT</text>
+<line x1="202" y1="83" x2="340" y2="83" class="dim"/>
+<text x="271" y="97" class="sub" text-anchor="middle">LLM + Planning</text>
+<text x="271" y="111" class="sub" text-anchor="middle">Task Delegation</text>
+<text x="271" y="125" class="sub" text-anchor="middle">Short/Long Memory</text>
+<text x="271" y="139" class="sub" text-anchor="middle">Tool Use + RAG</text>
+<text x="271" y="153" class="sub" text-anchor="middle">State Management</text>
+<text x="271" y="167" class="sub" text-anchor="middle">Error Handling</text>
+
+<!-- Research Agent -->
+<rect x="415" y="48" width="162" height="62" rx="4" class="box"/>
+<text x="496" y="67" class="lbl" text-anchor="middle">[ RESEARCH AGENT ]</text>
+<line x1="425" y1="73" x2="567" y2="73" class="dim"/>
+<text x="496" y="87" class="sub" text-anchor="middle">Web Search + Knowledge Base</text>
+<text x="496" y="100" class="sub" text-anchor="middle">RAG · VectorDB · Embeddings</text>
+
+<!-- Analysis Agent -->
+<rect x="415" y="128" width="162" height="62" rx="4" class="box"/>
+<text x="496" y="147" class="lbl" text-anchor="middle">[ ANALYSIS AGENT ]</text>
+<line x1="425" y1="153" x2="567" y2="153" class="dim"/>
+<text x="496" y="167" class="sub" text-anchor="middle">BI · Data Processing · SQL</text>
+<text x="496" y="180" class="sub" text-anchor="middle">Charts · Insights · Reports</text>
+
+<!-- Action Agent -->
+<rect x="415" y="208" width="162" height="62" rx="4" class="box"/>
+<text x="496" y="227" class="lbl" text-anchor="middle">[ ACTION AGENT ]</text>
+<line x1="425" y1="233" x2="567" y2="233" class="dim"/>
+<text x="496" y="247" class="sub" text-anchor="middle">API Calls · RPA · n8n/Make</text>
+<text x="496" y="260" class="sub" text-anchor="middle">Notifications · Integrations</text>
+
+<!-- OUTPUT box -->
+<rect x="642" y="55" width="142" height="100" rx="4" class="box"/>
+<text x="713" y="74" class="lbl" text-anchor="middle">[ OUTPUT ]</text>
+<line x1="652" y1="80" x2="774" y2="80" class="dim"/>
+<text x="713" y="94" class="sub" text-anchor="middle">Dashboards &amp; Reports</text>
+<text x="713" y="108" class="sub" text-anchor="middle">Automated Actions</text>
+<text x="713" y="122" class="sub" text-anchor="middle">Alerts &amp; Decisions</text>
+<text x="713" y="136" class="sub" text-anchor="middle">Completed Processes</text>
+<text x="713" y="150" class="sub" text-anchor="middle">Audit Logs</text>
+
+<!-- ARROWS -->
+<!-- TRIGGER → ORCH -->
+<line x1="132" y1="105" x2="192" y2="105" class="arr"/>
+
+<!-- ORCH → Research -->
+<path d="M 350,75 Q 383,79 415,79" class="arr"/>
+
+<!-- ORCH → Analysis -->
+<line x1="350" y1="110" x2="415" y2="159" class="arr"/>
+
+<!-- ORCH → Action -->
+<path d="M 350,145 Q 383,209 415,239" class="arr"/>
+
+<!-- Research → OUTPUT -->
+<path d="M 577,79 Q 610,95 642,95" class="arr"/>
+
+<!-- Analysis → OUTPUT -->
+<line x1="577" y1="159" x2="642" y2="120" class="arr"/>
+
+<!-- Action → OUTPUT -->
+<path d="M 577,239 Q 610,155 642,135" class="arr"/>
+
+<!-- Footer bar -->
+<rect x="0" y="277" width="800" height="13" fill="#001200"/>
+<text x="400" y="287" class="sub" text-anchor="middle">CrewAI · LangChain · AutoGen · Claude API · OpenAI · n8n · Make.com · LlamaIndex · LangGraph · Power BI · SAP</text>
+</svg>

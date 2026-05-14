@@ -59,6 +59,59 @@ linkedin: linkedin.com/in/mauro-andrade-5a782147
 
 ---
 
+## `> IA & AUTOMAÇÃO DE PROCESSOS`
+
+<div align="center">
+
+![AI Flow](https://raw.githubusercontent.com/mhaurinho/mhaurinho/circleci-project-setup/ai-flow.svg)
+
+</div>
+
+```python
+# Exemplo de orquestração de agentes de IA para processos de negócio
+from crewai import Agent, Task, Crew
+
+orchestrator = Agent(
+    role="Orquestrador de Processos",
+    goal="Coordenar agentes para automatizar fluxos de negócio",
+    tools=[search_tool, data_tool, api_tool]
+)
+
+research_agent = Agent(role="Pesquisador",  goal="Buscar e consolidar informações relevantes")
+analysis_agent = Agent(role="Analista BI",  goal="Processar dados e gerar insights acionáveis")
+action_agent   = Agent(role="Executor",     goal="Acionar APIs, ERPs e sistemas externos")
+
+crew = Crew(agents=[orchestrator, research_agent, analysis_agent, action_agent])
+result = crew.kickoff(inputs={"processo": "Relatório de Performance Q1"})
+```
+
+<div align="center">
+
+![CrewAI](https://img.shields.io/badge/CrewAI-00FF41?style=for-the-badge&logo=robot&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-00CC2E?style=for-the-badge&logo=chainlink&logoColor=black)
+![AutoGen](https://img.shields.io/badge/AutoGen-00AA25?style=for-the-badge&logo=microsoft&logoColor=black)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![Make](https://img.shields.io/badge/Make.com-6D00CC?style=for-the-badge&logo=integromat&logoColor=white)
+![Claude API](https://img.shields.io/badge/Claude%20API-CC785C?style=for-the-badge&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-00FF41?style=for-the-badge&logo=graphql&logoColor=black)
+
+</div>
+
+```
+ CASOS DE USO — IA APLICADA A NEGÓCIOS:
+
+ [→] Automação de relatórios BI com agentes LLM
+ [→] Extração e análise de documentos (NLP + RAG)
+ [→] Integração SAP + IA para processos ERP
+ [→] Chatbots corporativos com memória e contexto
+ [→] Pipelines de dados inteligentes com LangChain
+ [→] Orquestração multi-agente para decisões complexas
+ [→] Monitoramento proativo com alertas automatizados
+```
+
+---
+
 ## `> STACK DE INTERESSE`
 
 <div align="center">
@@ -86,14 +139,19 @@ class MauroAndrade:
         self.role        = "Tech Enthusiast & Innovation Ambassador"
         self.localizacao = "Goiânia, GO — Brasil"
         self.interesses  = [
-            "Business Intelligence",
+            "IA & Automação de Processos",
+            "Agentes de IA (CrewAI, LangChain, AutoGen)",
+            "Business Intelligence & Data Analytics",
             "Inovação & Empreendedorismo",
             "Hackathons & Startups",
-            "Construção de Comunidades Tech",
-            "Transformação Digital",
+            "Transformação Digital com IA",
         ]
-        self.aprendendo_agora = "Business Intelligence avançado"
-        self.buscando         = "Colaborações em projetos de impacto"
+        self.aprendendo_agora = [
+            "AI Agents & Multi-Agent Orchestration",
+            "Business Intelligence avançado",
+            "LLMOps & Automação com n8n / Make.com",
+        ]
+        self.buscando = "Colaborações em projetos de impacto com IA"
 
     def filosofia(self):
         return "A tecnologia é a ferramenta. As pessoas são o propósito."
